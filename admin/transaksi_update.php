@@ -25,7 +25,7 @@ transaksi_tgl_selesai='$tgl_selesai', transaksi_status='$status' where transaksi
 $jenis_pakaian = $_POST['jenis_pakaian'];
 $jumlah_pakaian = $_POST['jumlah_pakaian'];
 
-// menghapus semua pakaian dalam transaksi ini
+// menghapus semua pakaian dalam transaksi ini 
 mysqli_query($koneksi,"delete from pakaian where pakaian_transaksi='$id'");
 
 
@@ -40,5 +40,5 @@ for($x=0;$x<count($jenis_pakaian);$x++){
 
     }
 }
-header("location:transaksi.php");
+echo "<script>alert('Data sudah diubah');window.location.href='transaksi.php'</script>";
 ?>
